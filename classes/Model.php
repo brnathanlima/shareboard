@@ -16,7 +16,7 @@ abstract class Model
 
     public function bind($param, $value, $type = null)
     {
-        if (isnull($type)) {
+        if (is_null($type)) {
             switch(true) {
                 case is_int($value):
                     $type = PDO::PARAM_INT;
@@ -43,5 +43,10 @@ abstract class Model
     {
         $this->execute();
         return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function lastInsertId()
+    {
+        return $this->dbh->lastInsertId();
     }
 }

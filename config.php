@@ -6,5 +6,5 @@ define('DB_PASS', '');
 define('DB_NAME', 'shareboard');
 
 // Definir urls
-define('ROOT_PATH', '/shareboard');
+define('ROOT_PATH', '/examples/shareboard');
 define('ROOT_URL', 'http://localhost/examples/shareboard');

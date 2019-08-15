@@ -9,8 +9,8 @@
         <title>Shareboard</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="assets/bootstrap/dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="<?= ROOT_URL ?>/assets/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="<?= ROOT_URL ?>/assets/css/style.css">
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -41,11 +41,7 @@
             </div>
         </nav>
         <main role="main" class="container">
-            <div class="starter-template">
-                <div class="starter-template">
-                    <?php require($view); ?>
-                </div>
-            </div>
+            <?php require($view); ?>
         </main><!-- /.container -->
         <script src="" async defer></script>
     </body>
