@@ -32,10 +32,10 @@
                 </ul>
                 <ul class="navbar-nav navbar-right">
                     <li class="nav-item">
-                        <a class="nav-link" href="<?= ROOT_URL ?>users/login">Login<span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="<?= ROOT_URL ?>/users/login">Login<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?= ROOT_URL ?>users/register">Register<span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="<?= ROOT_URL ?>/users/register">Register<span class="sr-only">(current)</span></a>
                     </li>
                 </ul>
             </div>
