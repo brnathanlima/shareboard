@@ -31,12 +31,21 @@
                 </li>
                 </ul>
                 <ul class="navbar-nav navbar-right">
+                    <?php if (!isset($_SESSION['is_logged_in'])) : ?>
                     <li class="nav-item">
                         <a class="nav-link" href="<?= ROOT_URL ?>/users/login">Login<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="<?= ROOT_URL ?>/users/register">Register<span class="sr-only">(current)</span></a>
                     </li>
+                    <?php else : ?>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?= ROOT_URL ?>">Welcome, <?= $_SESSION['user_data']['name'] ?><span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?= ROOT_URL ?>/users/logout">Logout<span class="sr-only">(current)</span></a>
+                    </li>
+                    <?php endif; ?>
                 </ul>
             </div>
         </nav>

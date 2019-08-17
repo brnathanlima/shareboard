@@ -1,4 +1,7 @@
 <?php
+// Start session
+session_start();
+
 // Include config and Bootstrap
 require 'config.php';
 require 'classes/bootstrap.php';

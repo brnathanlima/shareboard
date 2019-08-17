@@ -5,16 +5,16 @@
     <div class="card-body">
         <form method="post" action="<?php htmlspecialchars($_SERVER['PHP_SELF']); ?>">
             <div class="form-group">
-                <label for="title">Name</label>
-                <input type="text" name="name" id="title" class="form-control">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" class="form-control">
             </div>
             <div class="form-group">
-                <label for="body">Email</label>
-                <input type="text" name="email" id="body" class="form-control">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" class="form-control">
             </div>
             <div class="form-group">
-                <label for="link">Password</label>
-                <input type="password" name="password" id="link" class="form-control">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" class="form-control">
             </div>
             <div class="form-group">
                 <input type="submit" name="submit" value="Submit" class="btn btn-primary">
