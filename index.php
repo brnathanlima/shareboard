@@ -7,6 +7,7 @@ require 'config.php';
 require 'classes/bootstrap.php';
 require 'classes/Controller.php';
 require 'classes/Model.php';
+require 'classes/Message.php';
 
 require 'controllers/Home.php';
 require 'controllers/Users.php';

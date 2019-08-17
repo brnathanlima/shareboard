@@ -50,8 +50,22 @@
             </div>
         </nav>
         <main role="main" class="container">
+            <?php if (isset($_SESSION['errorMsg'])) : ?>
+            <div class="alert alert-danger" role="alert">
+                <?php
+                echo $_SESSION['errorMsg'];
+                unset($_SESSION['errorMsg']);
+                ?>
+            </div>
+            <?php elseif (isset($_SESSION['successMsg'])) : ?>
+            <div class="alert alert-success " role="alert">
+            <?php
+                echo $_SESSION['successMsg'];
+                unset($_SESSION['successMsg']);
+            ?>
+            </div>
+            <?php endif; ?>
             <?php require($view); ?>
         </main><!-- /.container -->
-        <script src="" async defer></script>
     </body>
 </html>

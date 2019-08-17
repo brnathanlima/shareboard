@@ -1,5 +1,9 @@
 <div class="starter-template">
-    <p class="lead"><a class="btn btn-success" href="<?= ROOT_PATH . '/shares/add' ?>">Share now</a></p>
+    <p class="lead">
+    <?php if (isset($_SESSION['is_logged_in'])) : ?>
+    <a class="btn btn-success" href="<?= ROOT_PATH . '/shares/add' ?>">Share now</a>
+    <?php endif; ?>
+    </p>
 
     <?php foreach ($viewModel as $item) : ?>
         <?= $item['title'] ?><br>

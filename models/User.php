@@ -4,10 +4,14 @@ class UserModel extends Model
     public function register()
     {
         $post = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
-
+        
         $password = md5($post['password']);
 
         if ($post['submit']) {
+            if ($post['name'] == '' || $post['name'] == '' || $post['name'] == '') {
+                Message::setMsg('Please fill in all fields', 'error');
+                return;
+            }
             $this->query('INSERT INTO users (name, email, password) VALUES(:name, :email, :password)');
             $this->bind(':name', $post['name']);
             $this->bind(':email', $post['email']);
@@ -15,7 +19,9 @@ class UserModel extends Model
             $this->execute();
 
             if ($this->lastInsertId()) {
+                Message::setMsg('User successfuly registered!', 'success');
                 header('Location: '.ROOT_URL.'/users/login');
+                exit();
             }
         }
         return;
@@ -43,7 +49,7 @@ class UserModel extends Model
                 ];
                 header('Location: '.ROOT_URL.'/shares');
             } else {
-                echo 'Incorrect login';
+                Message::setMsg('Incorrect login', 'error');
             }
         }
     }
